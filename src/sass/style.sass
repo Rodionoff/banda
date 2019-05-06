@@ -1,0 +1,427 @@
+@import 'reset'
+@import 'normalize'
+@import 'fonts'
+
+*
+  box-sizing: border-box
+
+html,
+body
+  margin: 0
+
+img
+  max-width: 100%
+
+.header
+  font-family: ProximaNova
+  font-size: 40px
+  line-height: 1.2
+  font-weight: 400
+  color: #000000
+
+  p
+    text-align: left
+    margin: auto
+
+.banners
+  display: flex
+  flex-wrap: wrap
+
+.banner
+  max-width: 564px
+  max-height: 294px
+  width: 564px
+  height: 294px
+  margin-bottom: 2.5rem
+
+.kubometria
+  background-image: url('../img/banner1__background.png')
+  display: flex
+  padding-left: 15px
+  padding-bottom: 13px
+  margin-right: 41px
+
+.kubometria__image-wrapper
+  position: relative
+  width: 195px
+  min-width: 195px
+  padding-top: 13px
+  margin-right: 43px
+
+  img:first-child
+    width: 195px
+    max-width: 195px
+    position: absolute
+
+  img:last-child
+    width: 106px
+    position: absolute
+    left: 128px
+    bottom: 162px
+  
+.kubometria__image-link
+  cursor: pointer
+
+.kubometria__info-wrapper
+  padding-top: 22px
+
+.kubometria__title
+  font-family: ProximaNova
+  font-size: 30.8px
+  line-height: 1.2
+  font-weight: 700
+  color: #000000
+
+.counter__title
+  font-family: ProximaNova
+  font-size: 16px
+  line-height: 1.2
+  font-weight: 400
+  color: #000000
+  margin-bottom: 14px
+
+.counter
+  width: 282px
+  display: flex
+  justify-content: space-between
+  font-family: Umnik
+  font-size: 55px
+  font-weight: 700
+  color: #000000
+  margin-bottom: 10px
+
+.counter__hours,
+.counter__minutes,
+.counter__seconds
+  background-image: url('../img/rect.png')
+  width: 80px
+  height: 55px
+  border-radius: 5.0px
+  display: flex
+  position: relative
+  
+.counter__hours-left,
+.counter__minutes-left,
+.counter__seconds-left,
+.counter__hours-right,
+.counter__minutes-right,
+.counter__seconds-right
+  padding-top: 3px
+  padding-left: 5px
+  width: 40px
+
+.counter__border
+  position: absolute
+  border: 1px dashed #fbb100
+  width: 2px
+  height: 55px
+  left: 50%
+  top: 0
+
+.counter__text
+  font-family: ProximaNova
+  font-size: 16px
+  line-height: 1.2
+  font-weight: 400
+  color: #000000
+  text-align: center
+
+.kubometria__bottom
+  display: flex
+  justify-content: space-between
+  width: 285px
+
+.kubometria__price
+  align-self: flex-start
+
+.kubometria__current-price
+  font-family: ProximaNova
+  font-size: 36px
+  line-height: 1.2
+  font-weight: 700
+  color: #ff0072
+  padding: 0
+
+.kubometria__previous-price 
+  position: relative
+  width: 64px
+  text-align: center
+
+.kubometria__cross-line
+  position: absolute
+  background-image: url('../img/cross_line.png')
+  background-repeat: no-repeat
+  background-position: center
+  top: 0
+  left: 0
+  width: 64px
+  height: 100%
+
+.banner__button
+  box-shadow: 0px 2px 1px 0px rgba(0,0,0,0.43)
+  width: 144px
+  height: 46px
+  background-color: #ff0072
+  font-family: ProximaNova
+  font-size: 18.1px
+  line-height: 23px
+  font-weight: 700
+  text-transform: uppercase
+  color: #ffffff
+  align-self: center
+  cursor: pointer
+
+  &:hover
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.43)
+    background-color: lighten(#ff0072, 10%)
+
+
+.zverobukvi__link
+  cursor: pointer
+  background-size: cover
+
+.zverobukvi
+  background-image: url("../img/zverobukvi__background.png")
+  position: relative
+  background-position: center
+  background-size: cover
+  background-repeat: no-repeat
+
+.zverobukvi__button
+  position: absolute
+  right: 32px
+  bottom: 19px
+
+@media (max-width: 490px)
+  .main,
+  .header
+    padding: 1rem 0 0 0
+  
+  .header
+    font-size: calc(40 * 0.53 * 1px)
+    max-width: calc(566 * 0.53 * 1px)
+    margin: auto
+
+  .banners
+    flex-direction: column
+    align-items: center
+
+  .banner
+    max-width: calc(566 * 0.53 * 1px)
+    max-height: calc(294 * 0.53 * 1px)
+    width: calc(566 * 0.53 * 1px)
+    height: calc(294 * 0.53 * 1px)
+    margin-bottom: 15px
+  
+  .kubometria
+    padding-left: calc(15 * 0.53 * 1px)
+    padding-bottom: calc(13 * 0.53 * 1px)
+    margin-right: 0
+  
+  .kubometria__image-wrapper
+    width: calc(195 * 0.53 * 1px)
+    min-width: calc(195 * 0.53 * 1px)
+    padding-top: calc(13 * 0.53 * 1px)
+    margin-right: calc(43 * 0.53 * 1px)
+    height: calc(294px * 0.53 * 1px)
+  
+    img:first-child
+      width: calc(195 * 0.53 * 1px)
+      max-width: calc(195 * 0.53 * 1px)
+  
+    img:last-child
+      width: calc(106 * 0.53 * 1px)
+      left: calc(128 * 0.53 * 1px)
+      bottom: calc(162 * 0.53 * 1px)
+    
+  .kubometria__info-wrapper
+    padding-top: calc(22 * 0.53 * 1px)
+  
+  .kubometria__title
+    font-size: calc(30.8 * 0.53 * 1px)
+  
+  .counter__title
+    font-size: calc(16 * 0.53 * 1px)
+    margin-bottom: calc(14 * 0.53 * 1px)
+  
+  .counter
+    width: calc(282 * 0.53 * 1px)
+    font-size: calc(55 * 0.53 * 1px)
+    margin-bottom: calc(10 * 0.53 * 1px)
+  
+  .counter__hours,
+  .counter__minutes,
+  .counter__seconds
+    width: calc(80 * 0.53 * 1px)
+    height: calc(55 * 0.53 * 1px)
+    
+  .counter__hours-left,
+  .counter__minutes-left,
+  .counter__seconds-left,
+  .counter__hours-right,
+  .counter__minutes-right,
+  .counter__seconds-right
+    padding-top: calc(3 * 0.53 * 1px)
+    padding-left: calc(5 * 0.53 * 1px)
+    width: calc(40 * 0.53 * 1px)
+  
+  .counter__border
+    width: calc(2 * 0.53 * 1px)
+    height: calc(55 * 0.53 * 1px)
+  
+  .counter__text
+    font-size: calc(16 * 0.53 * 1px)
+  
+  .kubometria__bottom
+    width: calc(285 * 0.53 * 1px)
+  
+  .kubometria__current-price
+    font-size: calc(36 * 0.53 * 1px)
+  
+  .kubometria__previous-price 
+    width: calc(64 * 0.53 * 1px)
+    font-size: calc(16 * 0.53 * 1px)
+  
+  .kubometria__cross-line
+    width: calc(64 * 0.53 * 1px)
+  
+  .banner__button
+    width: calc(144 * 0.53 * 1px)
+    height: calc(46 * 0.53 * 1px)
+    font-size: calc(18.1 * 0.53 * 1px)
+    line-height: calc(23 * 0.53 * 1px)
+  
+  .zverobukvi__button
+    right: calc(32 * 0.53 * 1px)
+    bottom: calc(19 * 0.53 * 1px)
+
+@media (min-width: 491px) and (max-width: 670px)
+  .main,
+  .header
+    padding: 1rem 0 0 0
+  
+  .header
+    margin: auto
+    font-size: calc(40 * 0.79 * 1px)
+    max-width: calc(566 * 0.79 * 1px)
+
+  .banners
+    flex-direction: column
+    align-items: center
+
+  .banner
+    max-width: calc(566 * 0.79 * 1px)
+    max-height: calc(294 * 0.79 * 1px)
+    width: calc(566 * 0.79 * 1px)
+    height: calc(294 * 0.79 * 1px)
+    margin-bottom: 15px
+  
+  .kubometria
+    padding-left: calc(15 * 0.79 * 1px)
+    padding-bottom: calc(13 * 0.79 * 1px)
+    margin-right: 0
+  
+  .kubometria__image-wrapper
+    width: calc(195 * 0.79 * 1px)
+    min-width: calc(195 * 0.79 * 1px)
+    padding-top: calc(13 * 0.79 * 1px)
+    margin-right: calc(43 * 0.79 * 1px)
+    height: calc(294px * 0.79 * 1px)
+  
+    img:first-child
+      width: calc(195 * 0.79 * 1px)
+      max-width: calc(195 * 0.79 * 1px)
+  
+    img:last-child
+      width: calc(106 * 0.79 * 1px)
+      left: calc(128 * 0.79 * 1px)
+      bottom: calc(162 * 0.79 * 1px)
+    
+  .kubometria__info-wrapper
+    padding-top: calc(22 * 0.79 * 1px)
+  
+  .kubometria__title
+    font-size: calc(30.8 * 0.79 * 1px)
+  
+  .counter__title
+    font-size: calc(16 * 0.79 * 1px)
+    margin-bottom: calc(14 * 0.79 * 1px)
+  
+  .counter
+    width: calc(282 * 0.79 * 1px)
+    font-size: calc(55 * 0.79 * 1px)
+    margin-bottom: calc(10 * 0.79 * 1px)
+  
+  .counter__hours,
+  .counter__minutes,
+  .counter__seconds
+    width: calc(80 * 0.79 * 1px)
+    height: calc(55 * 0.79 * 1px)
+    
+  .counter__hours-left,
+  .counter__minutes-left,
+  .counter__seconds-left,
+  .counter__hours-right,
+  .counter__minutes-right,
+  .counter__seconds-right
+    padding-top: calc(3 * 0.79 * 1px)
+    padding-left: calc(5 * 0.79 * 1px)
+    width: calc(40 * 0.79 * 1px)
+  
+  .counter__border
+    width: calc(2 * 0.79 * 1px)
+    height: calc(55 * 0.79 * 1px)
+  
+  .counter__text
+    font-size: calc(16 * 0.79 * 1px)
+  
+  .kubometria__bottom
+    width: calc(285 * 0.79 * 1px)
+  
+  .kubometria__current-price
+    font-size: calc(36 * 0.79 * 1px)
+  
+  .kubometria__previous-price 
+    width: calc(64 * 0.79 * 1px)
+    font-size: calc(16 * 0.79 * 1px)
+  
+  .kubometria__cross-line
+    width: calc(64 * 0.79 * 1px)
+  
+  .banner__button
+    width: calc(144 * 0.79 * 1px)
+    height: calc(46 * 0.79 * 1px)
+    font-size: calc(18.1 * 0.79 * 1px)
+    line-height: calc(23 * 0.79 * 1px)
+  
+  .zverobukvi__button
+    right: calc(32 * 0.79 * 1px)
+    bottom: calc(19 * 0.79 * 1px)
+
+@media (min-width: 671px)
+  .header
+    padding: 2rem 0
+    margin: auto
+    width: 564px
+
+  .banners
+    display: block
+    
+  .banner
+    margin: 0 auto 2rem
+
+@media (min-width: 1212px)
+  .header
+    width: 1169px
+    text-align: left
+
+  .banners
+    max-width: 1169px
+    margin: auto
+    display: flex
+    justify-content: space-between
+
+  .banner
+    margin: 0
+
+  .kubometria
