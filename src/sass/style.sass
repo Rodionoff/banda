@@ -2,6 +2,12 @@
 @import 'normalize'
 @import 'fonts'
 
+
+//   Сначала идут общие стили.
+//   Затем, специфичные для
+//   различных диагоналей.
+
+
 *
   box-sizing: border-box
 
@@ -14,7 +20,6 @@ img
 
 .header
   font-family: ProximaNova
-  font-size: 40px
   line-height: 1.2
   font-weight: 400
   color: #000000
@@ -27,100 +32,55 @@ img
   display: flex
   flex-wrap: wrap
 
-.banner
-  max-width: 564px
-  max-height: 294px
-  width: 564px
-  height: 294px
-  margin-bottom: 2.5rem
-
 .kubometria
   background-image: url('../img/banner1__background.png')
   display: flex
-  padding-left: 15px
-  padding-bottom: 13px
-  margin-right: 41px
 
 .kubometria__image-wrapper
   position: relative
-  width: 195px
-  min-width: 195px
-  padding-top: 13px
-  margin-right: 43px
 
   img:first-child
-    width: 195px
-    max-width: 195px
     position: absolute
 
   img:last-child
-    width: 106px
     position: absolute
-    left: 128px
-    bottom: 162px
   
 .kubometria__image-link
   cursor: pointer
 
-.kubometria__info-wrapper
-  padding-top: 22px
-
 .kubometria__title
   font-family: ProximaNova
-  font-size: 30.8px
   line-height: 1.2
   font-weight: 700
   color: #000000
 
 .counter__title
   font-family: ProximaNova
-  font-size: 16px
   line-height: 1.2
   font-weight: 400
   color: #000000
-  margin-bottom: 14px
 
 .counter
-  width: 282px
   display: flex
   justify-content: space-between
   font-family: Umnik
-  font-size: 55px
   font-weight: 700
   color: #000000
-  margin-bottom: 10px
 
 .counter__hours,
 .counter__minutes,
 .counter__seconds
   background-image: url('../img/rect.png')
-  width: 80px
-  height: 55px
   border-radius: 5.0px
   display: flex
   position: relative
   
-.counter__hours-left,
-.counter__minutes-left,
-.counter__seconds-left,
-.counter__hours-right,
-.counter__minutes-right,
-.counter__seconds-right
-  padding-top: 3px
-  padding-left: 5px
-  width: 40px
-
 .counter__border
   position: absolute
   border: 1px dashed #fbb100
-  width: 2px
-  height: 55px
-  left: 50%
-  top: 0
 
 .counter__text
   font-family: ProximaNova
-  font-size: 16px
   line-height: 1.2
   font-weight: 400
   color: #000000
@@ -129,22 +89,18 @@ img
 .kubometria__bottom
   display: flex
   justify-content: space-between
-  width: 285px
 
 .kubometria__price
   align-self: flex-start
 
 .kubometria__current-price
   font-family: ProximaNova
-  font-size: 36px
   line-height: 1.2
   font-weight: 700
   color: #ff0072
-  padding: 0
 
 .kubometria__previous-price 
   position: relative
-  width: 64px
   text-align: center
 
 .kubometria__cross-line
@@ -154,16 +110,11 @@ img
   background-position: center
   top: 0
   left: 0
-  width: 64px
-  height: 100%
 
 .banner__button
   box-shadow: 0px 2px 1px 0px rgba(0,0,0,0.43)
-  width: 144px
-  height: 46px
   background-color: #ff0072
   font-family: ProximaNova
-  font-size: 18.1px
   line-height: 23px
   font-weight: 700
   text-transform: uppercase
@@ -174,7 +125,6 @@ img
   &:hover
     box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.43)
     background-color: lighten(#ff0072, 10%)
-
 
 .zverobukvi__link
   cursor: pointer
@@ -189,8 +139,6 @@ img
 
 .zverobukvi__button
   position: absolute
-  right: 32px
-  bottom: 19px
 
 @media (max-width: 490px)
   .main,
@@ -403,12 +351,121 @@ img
     padding: 2rem 0
     margin: auto
     width: 564px
+    font-size: 40px
+    line-height: 1.2
+    font-weight: 400
 
   .banners
     display: block
     
   .banner
-    margin: 0 auto 2rem
+    max-width: 564px
+    max-height: 294px
+    width: 564px
+    height: 294px
+    margin-bottom: 2.5rem
+  
+  .kubometria
+    padding-left: 15px
+    padding-bottom: 13px
+  
+  .kubometria__image-wrapper
+    width: 195px
+    min-width: 195px
+    padding-top: 13px
+    margin-right: 43px
+  
+    img:first-child
+      width: 195px
+      max-width: 195px
+  
+    img:last-child
+      width: 106px
+      left: 128px
+      bottom: 162px
+    
+  .kubometria__info-wrapper
+    padding-top: 22px
+  
+  .kubometria__title
+    font-size: 30.8px
+    line-height: 1.2
+    font-weight: 700
+  
+  .counter__title
+    font-size: 16px
+    line-height: 1.2
+    font-weight: 400
+    margin-bottom: 14px
+  
+  .counter
+    width: 282px
+    font-size: 55px
+    font-weight: 700
+    margin-bottom: 10px
+  
+  .counter__hours,
+  .counter__minutes,
+  .counter__seconds
+    width: 80px
+    height: 55px
+    border-radius: 5.0px
+    
+  .counter__hours-left,
+  .counter__minutes-left,
+  .counter__seconds-left,
+  .counter__hours-right,
+  .counter__minutes-right,
+  .counter__seconds-right
+    padding-top: 3px
+    padding-left: 5px
+    width: 40px
+  
+  .counter__border
+    border: 1px dashed #fbb100
+    width: 2px
+    height: 55px
+    left: 50%
+    top: 0
+  
+  .counter__text
+    font-size: 16px
+    line-height: 1.2
+    font-weight: 400
+  
+  .kubometria__bottom
+    width: 285px
+  
+  .kubometria__current-price
+    font-size: 36px
+    line-height: 1.2
+    font-weight: 700
+    padding: 0
+  
+  .kubometria__previous-price 
+    width: 64px
+  
+  .kubometria__cross-line
+    top: 0
+    left: 0
+    width: 64px
+    height: 100%
+  
+  .banner__button
+    box-shadow: 0px 2px 1px 0px rgba(0,0,0,0.43)
+    width: 144px
+    height: 46px
+    font-size: 18.1px
+    line-height: 23px
+    font-weight: 700
+  
+    &:hover
+      box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.43)
+      background-color: lighten(#ff0072, 10%)
+  
+  .zverobukvi__button
+    right: 32px
+    bottom: 19px
 
 @media (min-width: 1212px)
   .header
@@ -423,5 +480,3 @@ img
 
   .banner
     margin: 0
-
-  .kubometria
